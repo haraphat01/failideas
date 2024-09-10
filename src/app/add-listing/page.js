@@ -10,6 +10,13 @@ export default function AddListing() {
     const [error, setError] = useState('');
     const [category, setCategory] = useState('');
     const [failureReason, setfailureReason] = useState('');
+    const [projectAssets, setProjectAssets] = useState('');
+    const [techStack, setTechStack] = useState('');
+    const [users, setUsers] = useState('');
+    const [fundingRaised, setFundingRaised] = useState('');
+    const [stage, setStage] = useState('');
+    const [revenueModel, setRevenueModel] = useState('');
+    const [tags, setTags] = useState('');
     const [success, setSuccess] = useState('');
     const router = useRouter();
 
@@ -100,14 +107,91 @@ export default function AddListing() {
                     </select>
                 </div>
                 <div className="mb-4">
-  <label className="block text-sm font-medium text-gray-700">Reason for Failure</label>
-  <textarea
-    value={failureReason}
-    onChange={(e) => setfailureReason(e.target.value)}
+                    <label className="block text-sm font-medium text-gray-700">Reason for Failure</label>
+                    <textarea
+                        value={failureReason}
+                        onChange={(e) => setfailureReason(e.target.value)}
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+                        placeholder="Why did this project fail?"
+                    />
+                </div>
+                <div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Project Assets</label>
+  <input
+    type="file"
+    value={projectAssets}
+    multiple
+    onChange={(e) => setProjectAssets(e.target.files)}
     className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
-    placeholder="Why did this project fail?"
   />
 </div>
+<div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Tech Stack</label>
+  <input
+    type="text"
+    value={techStack}
+    onChange={(e) => setTechStack(e.target.value)}
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+    placeholder="e.g., React, Node.js, MongoDB"
+  />
+</div>
+<div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Number of Users/Customers</label>
+  <input
+    type="number"
+    value={users}
+    onChange={(e) => setUsers(e.target.value)}
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+    placeholder="e.g., 1000"
+  />
+</div>
+
+<div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Funding Raised (if any)</label>
+  <input
+    type="number"
+    value={fundingRaised}
+    onChange={(e) => setFundingRaised(e.target.value)}
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+    placeholder="e.g., 50000"
+  />
+</div>
+<div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Stage of Completion</label>
+  <select
+    value={stage}
+    onChange={(e) => setStage(e.target.value)}
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+  >
+    <option value="MVP">MVP</option>
+    <option value="Prototype">Prototype</option>
+    <option value="Production Ready">Production Ready</option>
+    <option value="Shut Down">Shut Down</option>
+  </select>
+</div>
+<div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Revenue Model</label>
+  <input
+    type="text"
+    value={revenueModel}
+    onChange={(e) => setRevenueModel(e.target.value)}
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+    placeholder="e.g., Subscription, Ads"
+  />
+</div>
+
+<div className="mb-4">
+  <label className="block text-sm font-medium text-gray-700">Tags/Keywords</label>
+  <input
+    type="text"
+    value={tags}
+    onChange={(e) => setTags(e.target.value)}
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+    placeholder="e.g., AI, SaaS, Blockchain"
+  />
+</div>
+
+
 
                 {/* Error or Success Message */}
                 {error && <p className="text-red-500 text-sm">{error}</p>}

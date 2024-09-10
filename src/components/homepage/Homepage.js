@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from "../../../public/images/logo.png"
+
 
 export default function Home() {
   return (
     <div className="bg-white text-black">
-      {/* Company Logo */}
-      <header className="py-6">
-        <Image src={logo} alt='failideas logo' width={50} height={50} className="mx-auto" />
-      </header>
+     
 
       {/* Headline and Subheadline */}
       <section className="text-center my-12">
@@ -109,18 +106,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Contact Information */}
-      <footer className="text-center my-12">
-        <p className="text-gray-600">Contact Us: support@failedideas.com | +1-800-555-FAILED</p>
-        <div className="mt-4">
-          <Link href="/privacy-policy" className="text-black underline hover:text-gray-600 transition">
-            Privacy Policy
-          </Link>
-          <Link href="/terms-of-service" className="ml-4 text-black underline hover:text-gray-600 transition">
-            Terms of Service
-          </Link>
-        </div>
-      </footer>
+      
     </div>
   );
 }
