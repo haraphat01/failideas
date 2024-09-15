@@ -49,8 +49,8 @@ const Navbar = () => {
     <nav className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold flex items-center">
-          <Image src={logo} alt="failideas logo" width={50} height={50} className="mr-2" />
-          FailedIdeas.com
+          <Image src={logo} alt="failideas logo" width={30} height={30} className="mr-2" />
+          FailedIdeas
         </Link>
 
         {/* Mobile Menu Icon */}

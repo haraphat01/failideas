@@ -16,35 +16,21 @@ export default function Home() {
 
       {/* Primary CTA */}
       <div className="text-center my-12">
-        <Link href="/add-listing" className="bg-blue-600 text-white px-10 py-4 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 inline-block">
+        <Link href="/add-listing" className="bg-blue-600 text-white px-10 py-4 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 inline-block mb-5">
           
             List Your Project
           
         </Link>
-        <Link href="/listings" className="ml-6 text-blue-600 underline hover:text-blue-800 transition-all transform hover:scale-105">
+        <Link href="/listings" className="bg-blue-600 text-white px-10 py-4 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 inline-block ml-5">
           
             Browse Available Projects
         
         </Link>
       </div>
 
-      {/* Social Proof */}
-      <section className="text-center my-12">
-        <p className="text-gray-500">Featured In</p>
-        <div className="flex justify-center mt-6 space-x-8">
-          {/* Example logos or media */}
-          <Image src="/logo1.png" alt="Logo 1" width={120} height={50} />
-          <Image src="/logo2.png" alt="Logo 2" width={120} height={50} />
-          <Image src="/logo3.png" alt="Logo 3" width={120} height={50} />
-        </div>
-      </section>
+   
 
-      {/* Hero Image/Video */}
-      <section className="my-16">
-        <div className="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-xl">
-          <img src="/hero-image.jpg" alt="FailedIdeas Hero Image" className="w-full h-auto transition-transform hover:scale-105 duration-700" />
-        </div>
-      </section>
+    
 
       {/* Key Benefits */}
       <section className="text-center my-16">
@@ -129,7 +115,7 @@ export default function Home() {
 
       {/* Final CTA */}
       <div className="text-center my-12">
-        <Link href="/auth"  className="bg-blue-600 text-white px-10 py-4 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 inline-block">
+        <Link href="/listings"  className="bg-blue-600 text-white px-10 py-4 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 inline-block">
           
             Get Started Today
           

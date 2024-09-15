@@ -34,7 +34,7 @@ export default function ListingsPage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto my-10 p-8 bg-white text-black rounded-lg shadow-lg">
+    <div className="max-w-7xl mx-auto my-10 p-8 bg-white text-black">
       <h1 className="text-4xl font-extrabold text-gray-800 mb-8 text-center">Approved Listings</h1>
 
       {/* Search and Filters */}
@@ -73,21 +73,23 @@ export default function ListingsPage() {
       </div>
 
       {/* Listings */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredListings && filteredListings.length > 0 ? (
           filteredListings.map((listing) => (
-            <div key={listing.id} className="p-6 bg-gray-100 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold">{listing.title}</h2>
+            <div key={listing.id} className="p-6 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h2 className="text-2xl font-semibold text-gray-900">{listing.title}</h2>
               <p className="mt-2 text-gray-600">{listing.description}</p>
-              <p className="mt-2 text-gray-600">Price: ${listing.price}</p>
-              <p className="mt-2 text-gray-600">Category: {listing.category}</p>
-              <Link href={`/listings/${listing.id}`} className="text-blue-600 hover:underline mt-4 inline-block">
-                View Details
+              <p className="mt-4 text-gray-800 font-semibold">Price: ${listing.price}</p>
+              <p className="mt-2 text-gray-500">Category: {listing.category}</p>
+              <Link href={`/listings/${listing.id}`} className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200">
+                
+                  View Details
+              
               </Link>
             </div>
           ))
         ) : (
-          <p className="text-center col-span-full">No listings available.</p>
+          <p className="text-center col-span-full text-gray-600">No listings available.</p>
         )}
       </div>
     </div>

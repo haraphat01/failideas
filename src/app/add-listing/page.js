@@ -105,7 +105,7 @@ export default function AddListing() {
   return (
     <div className="max-w-5xl mx-auto my-10 p-8 bg-white text-black rounded-lg shadow-lg">
       <h1 className="text-4xl font-extrabold text-gray-800 mb-8 text-center">
-        Add Your Failed Project
+        Add Your Project
       </h1>
 
       {user ? (
@@ -248,7 +248,7 @@ export default function AddListing() {
      
        <button
     type="submit"
-    className="w-full bg-black text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-700 transition-all"
+    className="w-full bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-700 transition-all"
 >
     Submit Listing
 </button>
