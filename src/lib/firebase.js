@@ -1,6 +1,6 @@
-import { initializeApp } from 'firebase/app'; // Updated import
-import { getFirestore } from 'firebase/firestore'; // Updated import
-import { getAuth, GoogleAuthProvider } from 'firebase/auth'; // Import Auth and Google Provider
+import { initializeApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut as firebaseSignOut } from 'firebase/auth';
+// Import firestore if needed
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,9 +11,9 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig); // Initialize app
-const firestore = getFirestore(app); // Get Firestore instance
-const auth = getAuth(app); // Initialize Auth
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
-export { firestore, auth }; // Export Firestore and Auth
-export const googleProvider = new GoogleAuthProvider(); // Initialize Google Provider
+export { auth, googleProvider, signInWithPopup, firebaseSignOut, app };
